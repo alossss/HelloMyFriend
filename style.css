@@ -1,0 +1,130 @@
+/* #110036 */
+/* #fd0e42 */
+*{
+  padding: 0;
+  margin: 0;
+  box-shadow: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #110036; 
+  font-family: 'Bad csript', cursive;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+  color: rgb(255, 255, 255);
+  font-size: 3cm;
+}
+h1 span{
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 40px;
+  animation: animate 3s linear infinite;
+}
+h1 span:nth-child(1){
+  animation-delay: 0s;
+}
+h1 span:nth-child(2){
+  animation-delay: 0.25s;
+}
+h1 span:nth-child(3){
+  animation-delay: 0.5s;
+}
+h1 span:nth-child(4){
+  animation-delay: 0.75s;
+}
+h1 span:nth-child(5){
+  animation-delay: 1s;
+}
+h1 span:nth-child(6){
+  animation-delay: 1.25s;
+}
+h1 span:nth-child(7){
+  animation-delay: 1.5s;
+}
+h1 span:nth-child(8){
+  animation-delay: 1.75s;
+}
+
+@keyframes animate {
+  0%,100%
+  {
+    color: rgb(235, 251, 4);
+    filter: blur(2px);
+    box-sizing: 0 0 10px #55ff00,
+    0 0 10px #55ff00,
+    0 0 10px #55ff00,
+    0 0 10px #55ff00,
+    0 0 10px #55ff00,
+    0 0 10px #55ff00,
+    0 0 10px #55ff00,
+    0 0 10px #55ff00;
+  }
+  5%,95%
+  {
+    color: #111;
+    filter: blur(0px);
+    text-shadow: 0 0 10px;
+  }
+  
+}
+
+.heart8x {
+  animation: anition alternate 0.5s infinite;
+} 
+.heart {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: #fd0e42;
+  transform: rotate(45deg);
+  box-shadow: 0 0 50px #fd0e42;
+
+}
+
+.heart::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -50%;
+  border-radius: 50%;
+  background: #fd0e42;
+  transform: rotate(45deg);
+  box-shadow: 0 0 50px #fd0e42;
+
+}
+
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -50%;
+  left: 0;
+  border-radius: 50%;
+  background: #fd0e42;
+  transform: rotate(45deg);
+  box-shadow: 0 0 50px #fd0e42;
+
+}
+
+@keyframes anition {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+    transform: scale(1.4);
+  }
+  
+}
